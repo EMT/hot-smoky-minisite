@@ -1,0 +1,49 @@
+.image-grid {
+	overflow: hidden;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.image-cell {
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+
+.image-cell img {
+	display: block;
+	width: 100%;
+}
+
+
+// Move into a seperate file.
+
+.testimonial p {
+	box-sizing: border-box;
+	padding: 2em;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.image-cell.testimonial {
+	height: 0px;
+	padding-bottom: 32%;
+	background: rgb(242,56,62);
+	position: relative;
+	font-family: "freight-text-pro";
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+@media screen and (max-width: 600px) {
+	.image-cell {
+		width: 100%;
+	}
+
+	.image-cell.testimonial {
+		padding-bottom: 64%;
+	}
+}

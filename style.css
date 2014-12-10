@@ -46,6 +46,44 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.image-grid {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto; }
+
+.image-cell {
+  width: 50%;
+  float: left;
+  display: inline-block; }
+
+.image-cell img {
+  display: block;
+  width: 100%; }
+
+.testimonial p {
+  box-sizing: border-box;
+  padding: 2em;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.image-cell.testimonial {
+  height: 0px;
+  padding-bottom: 32%;
+  background: #f2383e;
+  position: relative;
+  font-family: "freight-text-pro";
+  font-size: 18px;
+  line-height: 1.5; }
+
+@media screen and (max-width: 600px) {
+  .image-cell {
+    width: 100%; }
+
+  .image-cell.testimonial {
+    padding-bottom: 64%; } }
 body {
   background: #f0efec; }
 
@@ -59,9 +97,18 @@ body {
   display: block;
   clear: both; }
 
+footer {
+  background: black;
+  padding: 4em; }
+
+.arsehole {
+  display: block;
+  margin: 0 auto;
+  width: 40px; }
+
 .social-media {
   width: 100%;
-  margin-top: 1em; }
+  margin-top: 2em; }
 
 .social-media ul {
   float: right; }
@@ -76,8 +123,78 @@ body {
 .logo {
   max-width: 280px;
   margin: 0 auto;
+  display: block;
+  margin-top: 4em; }
+
+.intro p {
+  font-family: "freight-text-pro";
+  font-size: 18px;
+  color: #f2383e;
+  text-align: center;
+  width: 40%;
+  line-height: 1.5;
+  margin: 4em auto 1em auto;
   display: block; }
 
+.intro {
+  margin-top: 5em;
+  margin-bottom: 4em; }
+
+.buy-me {
+  font-family: 'Helvetica';
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f2383e;
+  border-bottom: 1px solid;
+  padding-bottom: 0px; }
+
+@media screen and (max-width: 600px) {
+  .intro p {
+    width: 90%; } }
+.hashtag {
+  text-align: center;
+  color: white;
+  font-family: "freight-text-pro";
+  font-size: 18px;
+  margin-bottom: 3em; }
+
+.the-feed {
+  background: #f2383e;
+  position: relative;
+  margin-top: 340px;
+  padding: 0px 0 200px 0; }
+
+.feed-wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+.the-feed .feed {
+  margin: 0 -5px; }
+
+.the-feed .feed .content {
+  padding: 5px;
+  width: 33.333%;
+  float: left;
+  box-sizing: border-box; }
+
+.feed .content img {
+  width: 100%;
+  display: block; }
+
+.the-feed:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 170px;
+  background: url(img/footer-fire.png) repeat;
+  background-size: auto 180px;
+  position: absolute;
+  top: -170px; }
+
+@media screen and (max-width: 600px) {
+  .the-feed .feed .content {
+    width: 100%; } }
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot?19110942");
