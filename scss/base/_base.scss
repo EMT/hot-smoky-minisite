@@ -2,8 +2,14 @@ body {
 	background: rgb(240,239,236);
 }
 
-.inner-wrapper {
+.site-wrapper {
 	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
 }

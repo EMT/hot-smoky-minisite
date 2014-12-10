@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
@@ -48,14 +49,82 @@ table {
 body {
   background: #f0efec; }
 
-.inner-wrapper {
+.site-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   position: relative; }
 
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.social-media {
+  width: 100%;
+  margin-top: 1em; }
+
+.social-media ul {
+  float: right; }
+
+.social-media ul li {
+  display: inline-block; }
+
+.social-media ul li a {
+  color: #c6c6c6;
+  font-size: 1.25em; }
+
 .logo {
-  width: 20%;
+  max-width: 280px;
   margin: 0 auto;
   display: block; }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?19110942");
+  src: url("../fonts/fontello.eot?19110942#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?19110942") format("woff"), url("../fonts/fontello.ttf?19110942") format("truetype"), url("../fonts/fontello.svg?19110942#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?19110942#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-instagram:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-twitter:before {
+  content: '\e801'; }
+
+/* '' */
 
 /*# sourceMappingURL=style.css.map */
