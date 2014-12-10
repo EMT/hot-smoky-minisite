@@ -8,6 +8,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//use.typekit.net/zjj6gfh.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
+    <script src="https://checkout.stripe.com/v2/checkout.js"></script>
 </head>
 <body>
 	<div class="site-wrapper">
@@ -22,7 +23,39 @@
 		</div>
 		<div class="intro">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit consequuntur, quibusdam, voluptates, ab voluptatibus ratione repellendus molestias aliquam impedit neque assumenda blanditiis doloribus. Debitis, fugiat officia veritatis quos voluptatem optio.</p>
-			<p><a href="#" class="buy-me">Buy One</a></p>
+<form action="." method="post">
+        <noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+
+        <input 
+            type="submit" 
+            value="Buy One"
+            data-key="pk_test_t65boKNJtxACm26CFHGcfoyG"
+            data-amount="500"
+            data-currency="gbp"
+            data-name="Hot Smokey Bastard"
+            data-description="Hotsauce"
+            class="buy-me"
+        />
+
+        <script>
+        $(document).ready(function() {
+            $(':submit').on('click', function(event) {
+                event.preventDefault();
+
+                var $button = $(this),
+                    $form = $button.parents('form');
+
+                var opts = $.extend({}, $button.data(), {
+                    token: function(result) {
+                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
+                    }
+                });
+
+                StripeCheckout.open(opts);
+            });
+        });
+        </script>
+</form>
 		</div>
 		<div class="image-grid">
 			<div class="image-cell">
