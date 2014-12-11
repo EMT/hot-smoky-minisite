@@ -15,7 +15,7 @@
 	<div class="site-wrapper">
 		<div class="social-media clearfix">
 			<ul>
-				<li><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
+				<li><a href="http://instagram.com/markshayler" target="_blank"><i class="icon-instagram"></i></a></li>
 				<li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
 			</ul>
 		</div>
@@ -95,9 +95,15 @@
 	<script type="text/javascript">
 		var feed = new Instafeed({
 			get: 'tagged',
-			tagName: 'hotsmokeybastard',
+			tagName: 'hotsmokybastard',
 			clientId: '9d06bacabe4d4e8ba04a40abb7f0e03f',
-			limit: 6,
+			limit: 8, 
+			after: function () {
+			  var instagrams = $("#instafeed > a");
+			  for (var i = 6; i < instagrams.length; i += 1) {
+			    instagrams[i].remove();
+			  }
+			},
 			resolution: 'standard_resolution'
 		});
 		feed.run();
