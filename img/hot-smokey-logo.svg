@@ -229,5 +229,5 @@
 		<path fill="#F2383E" d="M1495.4,1055.1h-25.3v-33.7h24.9v5.8h-18v8.1h14.2v5.4H1477v8.8h18.8v5.8H1495.4z"/>
 	</g>
 </g>
-<line fill="none" stroke="#F2383E" stroke-miterlimit="10" x1="962.3" y1="711.1" x2="962.3" y2="942.7"/>
+<line fill="none" stroke="#F2383E" stroke-width="4px" stroke-miterlimit="10" x1="962.3" y1="711.1" x2="962.3" y2="942.7"/>
 </svg>
