@@ -67,6 +67,8 @@ table {
   color: white;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .image-cell.testimonial {
@@ -85,7 +87,7 @@ table {
   .image-cell.testimonial {
     padding-bottom: 64%; } }
 body {
-  background: #f0efec; }
+  background: #f7f7f5; }
 
 .site-wrapper {
   max-width: 1400px;
@@ -104,7 +106,7 @@ footer {
 .arsehole {
   display: block;
   margin: 0 auto;
-  width: 40px; }
+  width: 25px; }
 
 .social-media {
   width: 100%;
@@ -118,7 +120,15 @@ footer {
 
 .social-media ul li a {
   color: #c6c6c6;
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  transition: color 0.4s ease-out; }
+
+.social-media ul li a:hover {
+  color: #f2383e; }
+
+.hero {
+  padding-bottom: 4em;
+  border-bottom: 1px solid #f2383e; }
 
 .logo {
   max-width: 280px;
@@ -142,17 +152,19 @@ footer {
 
 .buy-me {
   font-family: 'Helvetica';
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-decoration: none;
-  font-size: 18px;
-  color: #f2383e;
+  font-size: 16px;
   border: none;
   background: none;
   margin: 0 auto;
   display: block;
   margin-top: 3em;
   border-bottom: 1px solid;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  background: #f2383e;
+  color: white;
+  padding: 0.65em 2.4em; }
   .buy-me:hover {
     cursor: pointer; }
 
@@ -162,9 +174,11 @@ footer {
 .hashtag {
   text-align: center;
   color: white;
-  font-family: "freight-text-pro";
+  font-family: Helvetica;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 18px;
-  margin-bottom: 3em; }
+  margin-bottom: 4em; }
 
 .the-feed {
   background: #f2383e;
@@ -176,16 +190,20 @@ footer {
   width: 90%;
   margin: 0 auto; }
 
-.the-feed .feed {
+.the-feed #instafeed {
   margin: 0 -5px; }
 
-.the-feed .feed .content {
+.the-feed #instafeed > a {
   padding: 5px;
   width: 33.333%;
   float: left;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: opacity 0.3s ease-in-out; }
 
-.feed .content img {
+.the-feed #instafeed > a:hover {
+  opacity: 0.8; }
+
+#instafeed a img {
   width: 100%;
   display: block; }
 
@@ -200,7 +218,7 @@ footer {
   top: -170px; }
 
 @media screen and (max-width: 600px) {
-  .the-feed .feed .content {
+  .the-feed #instafeed > a {
     width: 100%; } }
 @font-face {
   font-family: 'fontello';

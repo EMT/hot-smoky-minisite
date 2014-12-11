@@ -8,9 +8,10 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//use.typekit.net/zjj6gfh.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-    <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 </head>
-<body>
+<!-- Overwrite stripe style, removes the wierd side jank on overlay fade in -->
+<body style="overflow: visible !important;">
 	<div class="site-wrapper">
 		<div class="social-media clearfix">
 			<ul>
@@ -18,54 +19,58 @@
 				<li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
 			</ul>
 		</div>
-		<div class="hero">
-			<img src="img/hot-smokey-logo.svg" class="logo" alt="">
-		</div>
+	</div>
+	<div class="hero">
+		<img src="img/hot-smokey-logo.svg" class="logo" alt="">
+	</div>
+	<div class="site-wrapper">
 		<div class="intro">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit consequuntur, quibusdam, voluptates, ab voluptatibus ratione repellendus molestias aliquam impedit neque assumenda blanditiis doloribus. Debitis, fugiat officia veritatis quos voluptatem optio.</p>
-<form action="." method="post">
-        <noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+			<form action="." method="post">
+				<noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
 
-        <input 
-            type="submit" 
-            value="Buy One"
-            data-key="pk_test_t65boKNJtxACm26CFHGcfoyG"
-            data-amount="500"
-            data-currency="gbp"
-            data-name="Hot Smokey Bastard"
-            data-description="Hotsauce"
-            class="buy-me"
-        />
+				<input 
+				type="submit" 
+				value="Buy"
+				data-key="pk_test_t65boKNJtxACm26CFHGcfoyG"
+				data-amount="500"
+				data-currency="gbp"
+				data-name="Hot Smokey Bastard"
+				data-description="£5 for some damn good hotsauce."
+				data-billingAddress="true"
+				data-shippingAddress="true"
+				class="buy-me"
+				/>
 
-        <script>
-        $(document).ready(function() {
-            $(':submit').on('click', function(event) {
-                event.preventDefault();
+				<script>
+					$(document).ready(function() {
+						$(':submit').on('click', function(event) {
+							event.preventDefault();
 
-                var $button = $(this),
-                    $form = $button.parents('form');
+							var $button = $(this),
+							$form = $button.parents('form');
 
-                var opts = $.extend({}, $button.data(), {
-                    token: function(result) {
-                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
-                    }
-                });
+							var opts = $.extend({}, $button.data(), {
+								token: function(result) {
+									$form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
+								}
+							});
 
-                StripeCheckout.open(opts);
-            });
-        });
-        </script>
-</form>
+							StripeCheckout.open(opts);
+						});
+					});
+				</script>
+			</form>
 		</div>
 		<div class="image-grid">
 			<div class="image-cell">
 				<img src="img/top-left.jpg" alt="">
 			</div>
 			<div class="image-cell">
-				<img src="img/top-right.jpg" alt="">
+				<img src="img/bottom-left.jpg" alt="">
 			</div>
-			<div class="image-cell testimonial">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis, perferendis reprehenderit id quasi temporibus!</p>
+			<div class="image-cell">
+				<img src="img/top-right.jpg" alt="">
 			</div>
 			<div class="image-cell">
 				<img src="img/bottom-right.jpg" alt="">
@@ -76,14 +81,7 @@
 		<div class="site-wrapper">
 			<h2 class="hashtag">#Hotsmokeybastard</h2>
 			<div class="feed-wrapper">
-				<div class="feed clearfix">
-					<div class="content"><img src="http://placehold.it/310x310" alt=""></div>
-					<div class="content"><img src="http://placehold.it/310x310" alt=""></div>
-					<div class="content"><img src="http://placehold.it/310x310" alt=""></div>
-					<div class="content"><img src="http://placehold.it/310x310" alt=""></div>
-					<div class="content"><img src="http://placehold.it/310x310" alt=""></div>
-					<div class="content"><img src="http://placehold.it/310x310" alt=""></div>
-				</div>
+				<div id="instafeed" class="clearfix"></div>
 			</div>
 		</div>
 	</div>
@@ -93,5 +91,16 @@
 		</div>
 	</footer>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/instafeed.min.js"></script>
+	<script type="text/javascript">
+		var feed = new Instafeed({
+			get: 'tagged',
+			tagName: 'hotsmokeybastard',
+			clientId: '9d06bacabe4d4e8ba04a40abb7f0e03f',
+			limit: 6,
+			resolution: 'standard_resolution'
+		});
+		feed.run();
+	</script>
 </body>
 </html>

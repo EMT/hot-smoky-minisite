@@ -14,4 +14,14 @@
 .social-media ul li a {
 	color: rgb(198,198,198);
 	font-size: 1.25em;
+	transition: color 0.4s ease-out;
+}
+
+.social-media ul li a:hover {
+	color: $red;
+}
+
+.hero {
+	padding-bottom: 4em;
+	border-bottom: 1px solid $red;
 }
