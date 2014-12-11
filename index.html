@@ -5,10 +5,8 @@
 	<title>Hot Smokey Bastard</title>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//use.typekit.net/zjj6gfh.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 </head>
 <!-- Overwrite stripe style, removes the wierd side jank on overlay fade in -->
 <body style="overflow: visible !important;">
@@ -41,25 +39,6 @@
 				data-shippingAddress="true"
 				class="buy-me"
 				/>
-
-				<script>
-					$(document).ready(function() {
-						$(':submit').on('click', function(event) {
-							event.preventDefault();
-
-							var $button = $(this),
-							$form = $button.parents('form');
-
-							var opts = $.extend({}, $button.data(), {
-								token: function(result) {
-									$form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
-								}
-							});
-
-							StripeCheckout.open(opts);
-						});
-					});
-				</script>
 			</form>
 		</div>
 		<div class="image-grid">
@@ -90,23 +69,9 @@
 			<img src="img/arsehole.png" class="arsehole" alt="">
 		</div>
 	</footer>
-	<script src="js/bootstrap.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 	<script src="js/instafeed.min.js"></script>
-	<script type="text/javascript">
-		var feed = new Instafeed({
-			get: 'tagged',
-			tagName: 'hotsmokybastard',
-			clientId: '9d06bacabe4d4e8ba04a40abb7f0e03f',
-			limit: 8, 
-			after: function () {
-			  var instagrams = $("#instafeed > a");
-			  for (var i = 6; i < instagrams.length; i += 1) {
-			    instagrams[i].remove();
-			  }
-			},
-			resolution: 'standard_resolution'
-		});
-		feed.run();
-	</script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
