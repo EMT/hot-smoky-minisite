@@ -101,7 +101,7 @@ body {
   clear: both; }
 
 footer {
-  background: black;
+  background: #1d1d1b;
   padding: 4em; }
 
 .arsehole {
@@ -125,14 +125,13 @@ footer {
   transition: color 0.4s ease-out; }
 
 .social-media ul li a:hover {
-  color: #f2383e; }
+  color: #1d1d1b; }
 
 .hero {
-  padding-bottom: 4em;
-  border-bottom: 1px solid #f2383e; }
+  padding-bottom: 0em; }
 
 .logo {
-  max-width: 320px;
+  max-width: 280px;
   margin: 0 auto;
   display: block;
   margin-top: 4em; }
@@ -144,11 +143,11 @@ footer {
 .intro p {
   font-family: "freight-text-pro";
   font-size: 1.125em;
-  color: #f2383e;
+  color: #1d1d1b;
   text-align: center;
   width: 40%;
   line-height: 1.5;
-  margin: 4em auto 1em auto;
+  margin: 4em auto 4em auto;
   display: block; }
 
 .intro {
@@ -167,7 +166,7 @@ footer {
   margin-top: 3em;
   border-bottom: 1px solid;
   padding-bottom: 0px;
-  background: #f2383e;
+  background: #1d1d1b;
   color: white;
   padding: 0.65em 2.4em; }
   .buy-me:hover {
@@ -238,7 +237,7 @@ body {
   margin-bottom: 4em; }
 
 .the-feed {
-  background: #f2383e;
+  background: #1d1d1b;
   position: relative;
   margin-top: 340px;
   padding: 0px 0 8em 0; }
