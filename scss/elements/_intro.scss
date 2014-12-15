@@ -15,10 +15,10 @@
 }
 
 .buy-me {
-	font-family: 'Helvetica';
+	font-family: 'freight-text-pro';
 	/* text-transform: uppercase; */
 	text-decoration: none;
-	font-size: 1em;
+	font-size: 1.1em;
 	border: none;
 	background: none;
 	margin: 0 auto;
@@ -28,11 +28,13 @@
 	padding-bottom: 0px;
 	background: $red;
 	color: rgb(255, 255, 255);
-	padding: 0.65em 2.4em;
+	padding: 0.55em 2.2em;
+	transition: background 0.3s ease-out;
 
 	
 	&:hover {
 		cursor: pointer;
+		background: lighten($red,10%);
 	}
 
 }
