@@ -154,6 +154,9 @@ footer {
   margin-top: 5em;
   margin-bottom: 4em; }
 
+.intro a {
+  color: inherit; }
+
 .buy-me {
   font-family: 'freight-text-pro';
   /* text-transform: uppercase; */
