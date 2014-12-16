@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hot Smokey Bastard</title>
+	<title>Hot Smoky Bastard</title>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width">
 	<script src="//use.typekit.net/zjj6gfh.js"></script>
@@ -26,16 +26,24 @@
 			<p>Hot Smoky Bastard is a chilli sauce like no other. It’s as much about smoke as it is about heat. First you’ll get the smoky chilli, aubergine and tomato hit. This gives way to a gentle sweetness and then you are left with an afterburn that still allows you to taste other things. If you want the hottest sauce, keep googling, if you want the best hot sauce, you’ve found it. Hand-made in small batches in Leicestershire. You order, we make it. Bespoke manufacture. Every batch is slightly different. The sauce was inspired by my food hero <a href="http://www.wholelarderlove.com" target="_blank">Rohan Anderson</a> to use up surplus chillies in the autumn. Good food, with as little done to it as possible.</p>
 			<form action="." method="post">
 				<noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+				
+				<select id="qty-select">
+					<option value="1" selected="selected">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+					<option value="4">Four</option>
+					<option value="5">Five</option>
+				</select>
 
-				<input 
-				type="submit" 
-				value="Buy"
+				<input id="buy-btn"
 				disabled="disabled" 
+				type="submit" 
+				value="Buy one – £4 + £3.20 postage"
 				data-key="pk_test_As6qeld1oHP2WRTHSGqDMcs0"
 				data-amount="500"
 				data-currency="gbp"
-				data-name="Hot Smokey Bastard"
-				data-description="£5 for some damn good hotsauce."
+				data-name="Hot Smoky Bastard"
+				data-description="£4 for some damn good hotsauce."
 				data-billingAddress="true"
 				data-shippingAddress="true"
 				class="buy-me"

@@ -18,24 +18,33 @@
 	color: inherit;
 }
 
-.buy-me {
-	font-family: 'freight-text-pro';
-	/* text-transform: uppercase; */
-	text-decoration: none;
-	font-size: 1.1em;
-	border: none;
-	background: none;
-	margin: 0 auto;
-	display: block;
+form {
 	margin-top: 3em;
-	border-bottom: 1px solid;
-	padding-bottom: 0px;
-	background: $red;
-	color: rgb(255, 255, 255);
-	padding: 0.55em 2.2em;
+	text-align: center;
+
+	input, 
+	select {
+		display: block;
+		margin: 0 auto 1em;;
+		font-family: 'freight-text-pro';
+		text-decoration: none;
+		font-size: 1.1em;
+		border: none;
+		background: $red;
+		color: rgb(255, 255, 255);
+		padding: 0.55em 2.2em;
+	}
+
+	select {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+.buy-me {
+	// border-bottom: 1px solid;
 	transition: background 0.3s ease-out;
 
-	
 	&:hover {
 		cursor: pointer;
 		background: lighten($red,10%);
