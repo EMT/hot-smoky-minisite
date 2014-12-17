@@ -1,1 +1,4 @@
 .sass-cache
+/secret.php
+/vendor
+/composer.lock

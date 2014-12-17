@@ -45,6 +45,7 @@ $(document).ready(function() {
 		var postage_string = postage.toString().substring(0, 1) + '.' + postage.toString().substring(1);
 
 		$('#buy-btn').data('amount', amt + postage);
+		$('#amount').val(amt + postage);
 		$('#buy-btn').data('description', '£' + (amt / 100) + ' for some damn good hotsauce.');
 		$('#buy-btn').val('Buy ' + vals[qty - 1] + ' – £' + (amt / 100) + ' + £' + postage_string + ' postage');
 	});
