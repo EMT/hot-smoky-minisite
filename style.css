@@ -91,6 +91,7 @@ body {
 
 .site-wrapper {
   max-width: 1400px;
+  padding: 0 20px;
   margin: 0 auto;
   position: relative; }
 
@@ -100,13 +101,13 @@ body {
   clear: both; }
 
 footer {
-  background: black;
+  background: #1d1d1b;
   padding: 4em; }
 
 .arsehole {
   display: block;
   margin: 0 auto;
-  width: 25px; }
+  width: 1.563em; }
 
 .social-media {
   width: 100%;
@@ -124,49 +125,61 @@ footer {
   transition: color 0.4s ease-out; }
 
 .social-media ul li a:hover {
-  color: #f2383e; }
+  color: #1d1d1b; }
 
 .hero {
-  padding-bottom: 4em;
-  border-bottom: 1px solid #f2383e; }
+  padding-bottom: 0em; }
 
 .logo {
-  max-width: 280px;
+  max-width: 260px;
   margin: 0 auto;
   display: block;
   margin-top: 4em; }
 
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 80%;
+    margin-top: 2em; } }
 .intro p {
   font-family: "freight-text-pro";
-  font-size: 18px;
-  color: #f2383e;
+  font-size: 1.125em;
+  color: #1d1d1b;
   text-align: center;
   width: 40%;
   line-height: 1.5;
-  margin: 4em auto 1em auto;
+  margin: 4em auto 4em auto;
   display: block; }
 
 .intro {
   margin-top: 5em;
   margin-bottom: 4em; }
 
-.buy-me {
-  font-family: 'Helvetica';
-  /* text-transform: uppercase; */
-  text-decoration: none;
-  font-size: 16px;
-  border: none;
-  background: none;
-  margin: 0 auto;
-  display: block;
+.intro a {
+  color: inherit; }
+
+form {
   margin-top: 3em;
-  border-bottom: 1px solid;
-  padding-bottom: 0px;
-  background: #f2383e;
-  color: white;
-  padding: 0.65em 2.4em; }
+  text-align: center; }
+  form input,
+  form select {
+    display: block;
+    margin: 0 auto 1em;
+    font-family: 'freight-text-pro';
+    text-decoration: none;
+    font-size: 1.1em;
+    border: none;
+    background: #1d1d1b;
+    color: white;
+    padding: 0.55em 2.2em; }
+  form select {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+
+.buy-me {
+  transition: background 0.3s ease-out; }
   .buy-me:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    background: #373734; }
 
 @media screen and (max-width: 600px) {
   .intro p {
@@ -177,14 +190,14 @@ footer {
   font-family: Helvetica;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.125em;
   margin-bottom: 4em; }
 
 .the-feed {
-  background: #f2383e;
+  background: #1d1d1b;
   position: relative;
   margin-top: 340px;
-  padding: 0px 0 200px 0; }
+  padding: 0px 0 8em 0; }
 
 .feed-wrapper {
   width: 90%;
@@ -222,8 +235,8 @@ footer {
     width: 100%; } }
 @font-face {
   font-family: 'fontello';
-  src: url("../fonts/fontello.eot?19110942");
-  src: url("../fonts/fontello.eot?19110942#iefix") format("embedded-opentype"), url("../fonts/fontello.woff?19110942") format("woff"), url("../fonts/fontello.ttf?19110942") format("truetype"), url("../fonts/fontello.svg?19110942#fontello") format("svg");
+  src: url("fonts/fontello.eot?19110942");
+  src: url("fonts/fontello.eot?19110942#iefix") format("embedded-opentype"), url("fonts/fontello.woff?19110942") format("woff"), url("fonts/fontello.ttf?19110942") format("truetype"), url("fonts/fontello.svg?19110942#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */

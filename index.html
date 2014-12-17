@@ -2,65 +2,59 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hot Smokey Bastard</title>
+	<title>Hot Smoky Bastard</title>
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//use.typekit.net/zjj6gfh.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 </head>
 <!-- Overwrite stripe style, removes the wierd side jank on overlay fade in -->
 <body style="overflow: visible !important;">
 	<div class="site-wrapper">
 		<div class="social-media clearfix">
 			<ul>
-				<li><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
-				<li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
+				<li><a href="http://instagram.com/markshayler" target="_blank"><i class="icon-instagram"></i></a></li>
+				<li><a href="https://twitter.com/greenape" target="_blank"><i class="icon-twitter"></i></a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="hero">
-		<img src="img/hot-smokey-logo.svg" class="logo" alt="">
+		<img src="img/hot-smoky-logo.png" class="logo" alt="">
 	</div>
 	<div class="site-wrapper">
 		<div class="intro">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit consequuntur, quibusdam, voluptates, ab voluptatibus ratione repellendus molestias aliquam impedit neque assumenda blanditiis doloribus. Debitis, fugiat officia veritatis quos voluptatem optio.</p>
-			<form action="." method="post">
-				<noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+			<p>Hot Smoky Bastard is a chilli sauce like no other. It’s as much about smoke as it is about heat. First you’ll get the smoky chilli, aubergine and tomato hit. This gives way to a gentle sweetness and then you are left with an afterburn that still allows you to taste other things. If you want the hottest sauce, keep googling, if you want the best hot sauce, you’ve found it. Hand-made in small batches in Leicestershire. You order, we make it. Bespoke manufacture. Every batch is slightly different. The sauce was inspired by my food hero <a href="http://www.wholelarderlove.com" target="_blank">Rohan Anderson</a> to use up surplus chillies in the autumn. Good food, with as little done to it as possible.</p>
 
-				<input 
+			<p>We’re having some technical issues! We’re working on it and will be back by tomorrow (wednesday) lunchtime at the latest.</p>
+
+			<form action="/stripe.php" method="post">
+				<noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+				
+				<select id="qty-select">
+					<option value="1" selected="selected">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+					<option value="4">Four</option>
+					<option value="5">Five</option>
+				</select>
+
+				<input type="hidden" name="amount" id="amount" value="720" />
+
+				<input id="buy-btn"
 				type="submit" 
-				value="Buy"
-				data-key="pk_test_t65boKNJtxACm26CFHGcfoyG"
-				data-amount="500"
+				value="Buy one – £4 + £3.20 postage"
+				data-key="pk_live_AdXwYBkfVldH7A0RB5uVo7eE"
+				data-amount="720"
 				data-currency="gbp"
-				data-name="Hot Smokey Bastard"
-				data-description="£5 for some damn good hotsauce."
+				data-name="Hot Smoky Bastard"
+				data-description="£4 for some damn good hotsauce."
 				data-billingAddress="true"
 				data-shippingAddress="true"
 				class="buy-me"
 				/>
-
-				<script>
-					$(document).ready(function() {
-						$(':submit').on('click', function(event) {
-							event.preventDefault();
-
-							var $button = $(this),
-							$form = $button.parents('form');
-
-							var opts = $.extend({}, $button.data(), {
-								token: function(result) {
-									$form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
-								}
-							});
-
-							StripeCheckout.open(opts);
-						});
-					});
-				</script>
 			</form>
+
+			<p style="margin-top: 1em; color: rgb(190,190,190);">250ml of Hot Smoky Bastard in each bottle</p>
 		</div>
 		<div class="image-grid">
 			<div class="image-cell">
@@ -79,7 +73,7 @@
 	</div>
 	<div class="the-feed">
 		<div class="site-wrapper">
-			<h2 class="hashtag">#Hotsmokeybastard</h2>
+			<h2 class="hashtag">#Hotsmokybastard</h2>
 			<div class="feed-wrapper">
 				<div id="instafeed" class="clearfix"></div>
 			</div>
@@ -87,20 +81,13 @@
 	</div>
 	<footer>
 		<div class="site-wrapper">
+			<p style="margin-bottom: 4em; text-align: center; color: rgb(255,255,255);">70-72 Market St, Ashby de la Zouch, LE65 1AN</p>
 			<img src="img/arsehole.png" class="arsehole" alt="">
 		</div>
 	</footer>
-	<script src="js/bootstrap.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 	<script src="js/instafeed.min.js"></script>
-	<script type="text/javascript">
-		var feed = new Instafeed({
-			get: 'tagged',
-			tagName: 'hotsmokeybastard',
-			clientId: '9d06bacabe4d4e8ba04a40abb7f0e03f',
-			limit: 6,
-			resolution: 'standard_resolution'
-		});
-		feed.run();
-	</script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
