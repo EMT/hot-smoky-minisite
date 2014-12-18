@@ -14,7 +14,7 @@ if ($_POST) {
 		}
 // var_dump($_POST);
 		Stripe_Charge::create([
-			"amount" => 1000,
+			"amount" => $_POST['amount'],
 			"currency" => "gbp",
 			"card" => $_POST['stripeToken']
 		]);
