@@ -1,12 +1,16 @@
-.intro p {
+.intro {
 	font-family: "freight-text-pro";
 	font-size: 1.125em;
 	color: $red;
 	text-align: center;
-	width: 40%;
+	width: 60%;
 	line-height: 1.5;
-	margin: 4em auto 4em auto;
+	margin: 5em auto 4em auto;
 	display: block;
+	
+	p {
+		margin: 0 0 1em 0;
+	}
 }
 
 .intro {
