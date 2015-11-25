@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 	$('#qty-select').on('change', function(e) {
 		var qty = $(this).val(),
-			amt = qty * 450,
+			amt = qty * 500,
 			postage = 350,
 			vals = ['one', 'two', 'three', 'four', 'five'];
 
