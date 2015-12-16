@@ -81,6 +81,26 @@
 				class="buy-me"
 				/>
 			</form>
+
+			<p style="margin-top: 2em;"> — or — </p>
+
+			<p style="margin-top: 2em;">Our most loved sauce is our smoked green chilli, ginger and cumin. Its a zesty little number and is loved by Rohan Anderson, Anna Jones and me. It’s expensive, but bloody good.</p>
+
+			<form action="/stripe.php" method="post">
+				<input type="hidden" name="amount" id="amount-camping" value="1100" />
+
+				<input id="buy-btn-camping"
+				type="submit" 
+				value="Buy one bottle of smoked green chilli, ginger and cumin – £7.50 + £3.50 postage"
+				data-key="pk_live_AdXwYBkfVldH7A0RB5uVo7eE"
+				data-amount="1100"
+				data-currency="gbp"
+				data-name="Hot Smoky Bastard"
+				data-description="£7.50 for some damn good hotsauce."
+				data-billingAddress="true"
+				class="buy-me"
+				/>
+			</form>
 		</div>
 		<div class="image-grid">
 			<div class="image-cell">
@@ -107,7 +127,7 @@
 	</div>
 	<footer>
 		<div class="site-wrapper">
-			<p style="margin-bottom: 4em; text-align: center; color: rgb(255,255,255);">70-72 Market St, Ashby de la Zouch, LE65 1AN</p>
+			<p style="margin-bottom: 4em; text-align: center; color: rgb(255,255,255);">20 Moira Road, Donisthorpe DE12 7QE</p>
 			<img src="img/arsehole.png" class="arsehole" alt="">
 		</div>
 	</footer>
