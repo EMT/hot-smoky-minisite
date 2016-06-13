@@ -7,9 +7,33 @@
 	line-height: 1.5;
 	margin: 5em auto 4em auto;
 	display: block;
+
+	h2 {
+		font-size: 1.6em;
+		margin-top: 2em;
+		margin-bottom: 1em;
+	}
 	
 	p {
 		margin: 0 0 1em 0;
+	}
+
+	.image-block {
+		div {
+			display: inline-block;
+			box-sizing: border-box;
+			width: 27%;
+			max-width: 190px;
+			padding: 12px;
+			background: rgb(255,255,255);
+			border: 5px solid rgb(0,0,0);
+			margin: 0 8px 2em;
+
+			img {
+				max-width: 100%;
+				display: block;
+			}
+		}
 	}
 }
 

@@ -149,8 +149,24 @@ footer {
   line-height: 1.5;
   margin: 5em auto 4em auto;
   display: block; }
+  .intro h2 {
+    font-size: 1.6em;
+    margin-top: 2em;
+    margin-bottom: 1em; }
   .intro p {
     margin: 0 0 1em 0; }
+  .intro .image-block div {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 27%;
+    max-width: 190px;
+    padding: 12px;
+    background: white;
+    border: 5px solid black;
+    margin: 0 8px 2em; }
+    .intro .image-block div img {
+      max-width: 100%;
+      display: block; }
 
 .intro {
   margin-top: 5em;
